@@ -1,0 +1,23 @@
+{
+  "dependencies": {
+    "sass": "^1.42.1"
+  },
+  "name": "p3_lelievre_jimmy",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "sass":"sass --watch ./main.scss:./style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jimmylelievre/JimmyLelievre_3_08102021.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jimmylelievre/JimmyLelievre_3_08102021/issues"
+  },
+  "homepage": "https://github.com/jimmylelievre/JimmyLelievre_3_08102021#readme",
+  "description": ""
+}
