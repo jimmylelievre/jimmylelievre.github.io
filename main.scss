@@ -15,17 +15,25 @@ $grey: #f6f6f6;
   text-decoration: none;
   color: black;
 }
+.fontAwesome {
+  font-family: "FontAwesome", sans-serif;
+}
 
 .loader {
-  position: absolute;
+  position: fixed;
   width: 100%;
   height: 100%;
-  display: flex;
+  display: none;
   justify-content: center;
+  align-items: flex-start;
   padding-top: 25%;
   z-index: 5;
   background-color: #ffffff;
   animation: loader forwards 5s;
+}
+#loader {
+  animation: 2s load infinite ease-in-out;
+  width: 30%;
 }
 @keyframes load {
   0% {
@@ -35,9 +43,6 @@ $grey: #f6f6f6;
   100% {
     opacity: 100%;
   }
-}
-#loader {
-  animation: 2s load infinite ease-in-out;
 }
 
 @keyframes loader {
@@ -62,35 +67,39 @@ header img {
   margin-bottom: 15px;
 }
 .search {
-  display: flex;
-  justify-content: center;
-  background-color: #eaeaea;
-  /* -webkit-box-shadow: inset 0px 0px 0px 4px #515151;
-  box-shadow: inset 0px 2px 2px 0px #a2a2a2;*/
+  position: relative;
 }
 input {
+  width: 100%;
   text-align: center;
   padding-top: 10px;
   padding-bottom: 10px;
   margin-left: 0;
+  padding-left: 0;
+  padding-right: 0;
   border: none;
   background-color: #eaeaea;
-  /*-webkit-box-shadow: inset 0px 0px 0px 4px #515151;
-  box-shadow: inset 0px 2px 2px 0px #a2a2a2;*/
+  -webkit-box-shadow: inset 0px 0px 0px 4px #515151;
+  box-shadow: inset 0px 2px 2px 0px #a2a2a2;
 }
 input::placeholder {
-  color: rgb(74, 74, 74);
+  color: #4b4b4b;
   font-weight: 500;
 }
-
-.icon-search {
+.fa-map-marker-alt {
+  color: #4b4b4b;
+}
+.search-icon {
+  position: absolute;
+  top: 9px;
+  width: 100%;
+  height: 1px;
   display: flex;
   justify-content: center;
-  align-items: center;
-  position: relative;
-  left: 15px;
-  color: rgb(74, 74, 74);
-  z-index: 2;
+  padding-right: 120px;
+}
+.space-icon {
+  width: 135px;
 }
 .title {
   display: flex;
@@ -368,6 +377,9 @@ footer i {
   &:hover > .description-meal {
     padding-right: 100px;
   }
+  &:hover > h3 {
+    padding-right: 100px;
+  }
   &:hover .rotate {
     transform: rotate(360deg);
   }
@@ -420,6 +432,9 @@ footer i {
 .card-meal h3 {
   font-size: 15px;
   text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  padding-right: 60px;
 }
 .description-meal {
   font-size: 14px;
@@ -427,7 +442,7 @@ footer i {
   white-space: nowrap;
   overflow: hidden;
   transition: ease-out 0.3s;
-  padding-right: 45px;
+  padding-right: 60px;
 }
 .price {
   position: absolute;
@@ -462,18 +477,25 @@ footer i {
   header {
     display: flex;
     justify-content: flex-start;
-    margin-left: 20px;
+    margin-left: 50px;
   }
   header img {
-    width: 10%;
+    width: 150px;
     margin-top: 25px;
     margin-bottom: 10px;
   }
-  .search {
+  .search-icon {
+    position: absolute;
+    top: 9px;
+    left: 50px;
+    width: 100%;
+    height: 1px;
     display: flex;
     justify-content: flex-start;
-    padding-left: 20px;
-    margin-top: 20px;
+  }
+  input {
+    text-align: left;
+    padding-left: 70px;
   }
   .title {
     height: 300px;
