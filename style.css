@@ -291,6 +291,7 @@ button:hover {
   position: absolute;
   right: 0px;
   transition: 0.5s;
+  cursor: pointer;
 }
 
 .heart-accueil:hover::after {
