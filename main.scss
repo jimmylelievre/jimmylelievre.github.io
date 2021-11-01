@@ -15,13 +15,14 @@ $grey: #f6f6f6;
   text-decoration: none;
   color: black;
 }
+
 .fontAwesome {
   font-family: "FontAwesome", sans-serif;
 }
 
 .loader {
   position: fixed;
-  width: 100%;
+
   height: 100%;
   display: flex;
   justify-content: center;
@@ -29,7 +30,7 @@ $grey: #f6f6f6;
   padding-top: 25%;
   z-index: 5;
   background-color: #ffffff;
-  animation: loader forwards 5s;
+  animation: loader forwards 0s;
 }
 #loader {
   animation: 2s load infinite ease-in-out;
@@ -168,6 +169,9 @@ button:hover {
 }
 .card-function:hover {
   background-color: #f5edff;
+  & > i {
+    color: #9356dc;
+  }
 }
 
 .number {
@@ -257,11 +261,29 @@ button:hover {
   right: 20px;
   bottom: 20px;
 }
+
+.heart-accueil::before {
+  opacity: 0;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.5s;
+}
+.heart-accueil::after {
+  content: "\f004";
+  position: absolute;
+  right: 0px;
+  transition: 0.5s;
+}
+.heart-accueil:hover::after {
+  opacity: 0;
+  transition: 0.5s;
+}
 .heart-accueil:hover::before {
+  opacity: 100%;
   color: $primaire;
   cursor: pointer;
   font-weight: bold;
-  transition: 1s;
+  transition: 0.5s;
 }
 
 footer {
@@ -475,6 +497,9 @@ footer i {
 /* Responsive desktop et tablette Accueil */
 
 @media screen and (min-width: 846px) {
+  body {
+    overflow-x: hidden;
+  }
   header {
     display: flex;
     justify-content: flex-start;
